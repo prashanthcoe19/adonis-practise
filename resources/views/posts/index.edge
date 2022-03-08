@@ -1,0 +1,12 @@
+@layout('main')
+
+@section('content')
+    <h1>Posts</h1>
+    <p>{{title}}</p>
+    <ul>
+        @each(post in posts)
+            <li>Title: {{post.title}}</li>
+         <li>Body: {{post.body}}</li>
+         @endeach
+    </ul>
+@endsection
