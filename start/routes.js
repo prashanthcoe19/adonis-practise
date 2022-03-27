@@ -24,6 +24,14 @@ Route.get("/test", async () => {
   return "Hello Worlds";
 });
 
-Route.get("/test/:id", async ({ params }) => {
-  return `Id is ${params.id}`;
-});
+Route.get("/posts/add", "PostController.add");
+
+Route.post("/posts", "PostController.store");
+
+Route.get("/posts/edit/:id", "PostController.editView");
+
+Route.get("/posts/:id", "PostController.details");
+
+Route.put("/posts/:id", "PostController.edit");
+
+Route.delete("/posts/:id", "PostController.delete");
